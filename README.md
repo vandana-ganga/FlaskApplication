@@ -234,7 +234,6 @@ FlaskApplication/
 ├── templates/
 │   ├── index.html         # the welcome page
 │   └── health.html        # the health check page
-├── screenshots/           # images used in this README
 ├── .gitignore             # files Git should ignore
 └── README.md              # this file
 ```
@@ -245,3 +244,7 @@ FlaskApplication/
 
 - **Python 3.11**
 - **Flask 3.1.3** — the web framework that handles the endpoints
+
+
+
+scee
