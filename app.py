@@ -69,6 +69,20 @@ def get_credential(username):
     }), 200
 
 
+@app.route("/delete/<username>", methods=["DELETE"])
+def delete_credential(username):
+    """Remove a stored username and password, or 404 if it was never added."""
+    if username not in credentials:
+        return jsonify({"error": f"Username '{username}' not found"}), 404
+
+    del credentials[username]
+
+    return jsonify({
+        "message": f"User '{username}' deleted successfully",
+        "username": username,
+    }), 200
+
+
 @app.errorhandler(404)
 def handle_not_found(error):
     return jsonify({"error": "Endpoint not found"}), 404
@@ -78,7 +92,7 @@ def handle_not_found(error):
 def handle_method_not_allowed(error):
     return jsonify({
         "error": "Method not allowed. Check whether this endpoint expects "
-                 "GET or POST."
+                 "GET, POST or DELETE."
     }), 405
 
 
