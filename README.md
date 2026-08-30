@@ -213,15 +213,28 @@ git push origin main           # upload main to GitHub
 
 ### Application running in the browser
 
-![The Flask app running at localhost:5000](screenshots/app-running.png)
+The `/health` endpoint responding in Chrome, served by the Flask development server.
+
+<img src="screenshots/app-running.png" alt="The Flask app running in a browser showing App is running" width="700">
 
 ### GitHub repository showing the dev and main branches
 
-![The repository branch list showing both dev and main](screenshots/branches.png)
+Both branches present on GitHub, with `dev` used for development and `main` holding the released code.
+
+<img src="screenshots/branches.png" alt="The GitHub branches page listing dev and main" width="700">
+
+### Repository overview
+
+The repository home page showing the project files, commit count and release tags.
+
+<img src="screenshots/repository.png" alt="The GitHub repository home page" width="700">
 
 ### Commit and merge history for Version 1 and Version 2
 
-![Commit history showing the Version 1 and Version 2 merges](screenshots/commit-history.png)
+The branch graph showing Version 1 tagged on `main`, development continuing on `dev`, and `dev` merging
+back into `main` for the Version 2 release.
+
+<img src="screenshots/commit-history.png" alt="Commit history showing the Version 1 and Version 2 merges" width="700">
 
 ---
 
@@ -231,6 +244,7 @@ git push origin main           # upload main to GitHub
 FlaskApplication/
 ├── app.py                 # the application and its two endpoints
 ├── requirements.txt       # list of packages needed to run it
+├── screenshots/           # images used in this README
 ├── templates/
 │   ├── index.html         # the welcome page
 │   └── health.html        # the health check page
